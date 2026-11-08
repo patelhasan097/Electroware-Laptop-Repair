@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Electroware Laptop Repair</title>
+  <meta id="meta-desc" name="description" content="Electroware Laptop Repair: laptop and computer repair with 7+ years of experience.">
+  <meta id="meta-theme" name="theme-color" content="#07080B">
+  <link id="favicon" rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..600&family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="admin.css">
+
+  <!-- Three.js ko "three" naam se import karne ke liye (app.js lazy load karta hai) -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="loader" class="loader" aria-hidden="true"><span class="loader__bar"></span></div>
+
+  <div id="app">
+    <div id="site-root"></div>
+    <div id="admin-root" hidden></div>
+  </div>
+
+  <div id="preview-banner" class="preview-bar" hidden>
+    <span>Draft preview. Visitors cannot see this.</span>
+    <a href="#/admin">Back to Admin</a>
+  </div>
+
+  <noscript>
+    <p style="padding:24px;text-align:center;color:#F5F8FC;background:#070B12">
+      This website needs JavaScript to display its content. Please enable JavaScript and reload.
+    </p>
+  </noscript>
+
+  <!-- Classic scripts (defer) module se pehle chalte hain, isliye app.js ko gsap, ScrollTrigger aur Lenis mil jate hain -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
